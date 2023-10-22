@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANOVA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="racun.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/gh/formulajs/formulajs@2.9.3/dist/formula.min.js" defer></script>
+
+</head>
+<body>
+    <div id="prvi-unos" class="unos">
+        <p class="p">Unesite parametre:</p>
+        <div class="parametri">
+            <p class="text">BROJ MJERENJA:</p>
+            <input id="br-mjerenja" class="input-box" type="number" min="1" step="1"/>
+        </div>
+        <div class="parametri">
+            <p class="text">BROJ ALTERNATIVA:</p>
+            <input id="br-alternativa" class="input-box" type="number" min="1" step="1"/>
+        </div>
+        <button id="param-button" class="button">POTVRDA</button>
+    </div>
+
+    <div id="drugi-unos" class="hide unos">
+        <h3>ANOVA</h3>
+        <p class="p" id="p2">Unesite vrijednosti mjerenja:</p>
+        <div id="tabela"></div> 
+        <div id="tabela-rezultata"></div>
+        <div id="povjerenje" class="parametri">
+            <p class="text">Nivo povjerenja:</p>
+            <input type="number" id="povjerenje-input" class="input-box">
+        </div>
+        <button id="mjerenja-button" class="button hide">POTVRDA</button>
+        <button id="nazad-button" class="button hide">NAZAD</button>
+        <p id="anova"></p>
+    </div>
+
+    <div id="treci-unos" class="hide unos">
+        <h3>Kontrasti</h3>
+        <p class="p">Unesite parametre:</p>
+        <div class="parametri">
+            <p class="text">Prva alternativa:</p>
+            <input id="kontrast-prva" class="input-box" type="number" min="1" step="1"/>
+        </div>
+        <div class="parametri">
+            <p class="text">Druga alternativa:</p>
+            <input id="kontrast-druga" class="input-box" type="number" min="1" step="1"/>
+        </div>
+        <div id="povjerenje-kontrasti" class="parametri">
+            <p class="text">Nivo povjerenja:</p>
+            <input type="number" id="povjerenje-kontrasti-input" class="input-box">
+        </div>
+        <button id="kontrasti-button" class="button">POTVRDA</button>
+        <p id="kontrasti"></p>
+    </div>
+</body>
+</html>
